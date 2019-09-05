@@ -1,0 +1,37 @@
+Part 1 - News search
+Create search routines to perform queries on a set of documents defined at https://gist.github.com/edhiley/fdf7793d3d2c9e838c11. The file can be copied locally to your solution for ease of use. The documents are line separated and are referenced in the order they appear, e.g.
+|-------------------------------------------- | ------------- |  
+| News Article                                | Reference     |          
+| ------------------------------------------- |:-------------:|
+| June 5 , 2013 : The majority ...            | 0             |
+| --------------------------------------------|-------------- |  
+| July 9 , 2013 : The HSCIC has ...           | 1             |
+|-------------------------------------------- | ------------- |  
+
+
+The solution must:
+
+1.be implemented ideally in Python;
+2.pass the acceptance criteria (via unit tests);
+3.not use a library or service to perform the search;
+4.have a command line application that accepts search parameters, and returns the result;
+5.compile (if required) and run on Windows 7 or Ubuntu >= 12.04;
+6.have a README file with instructions on how to run the solution, this should be plain text (markdown) and not a word document;
+
+Acceptance criteria:
+
+The acceptance criteria are shown below.
+
+|-------------------------------------------- | ---------------- |-------------------------------------------- |   
+|Query                                        |Type of search    |    Expected outcome: document references    | 
+| ------------------------------------------- |:----------------:|-------------------------------------------- |
+| Care Quality Commission                     | or               |0,1,2,3,4,5,6                                | 
+| --------------------------------------------|----------------- |-------------------------------------------- |  
+| September 2004                              | or               |9                                            | 
+|-------------------------------------------- | ---------------- |-------------------------------------------- | 
+| general population generally                | or               |      6,8                                    | 
+| ------------------------------------------- |:----------------:|-------------------------------------------- |
+| Care Quality Commission admission           | and              |1                                            | 
+| --------------------------------------------|----------------- |-------------------------------------------- | 
+| general population Alzheimer                | and              |6                                            | 
+|-------------------------------------------- | ---------------- |-------------------------------------------- |
